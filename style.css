@@ -1,0 +1,213 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0d1117; /* لون غامق احترافي */
+    color: #c9d1d9;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* شريط التنقل */
+header {
+    background-color: rgba(13, 17, 23, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #30363d;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 30px;
+}
+
+nav a {
+    color: #c9d1d9;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #58a6ff; /* لون أزرق فاتح عند المرور */
+}
+
+/* الأقسام */
+section {
+    padding: 100px 0 50px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #58a6ff;
+}
+
+/* القسم الرئيسي (Hero) */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
+}
+
+#hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+#hero h3 {
+    color: #8b949e;
+    margin-bottom: 20px;
+}
+
+/* قسم عني */
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #161b22;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #30363d;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #58a6ff;
+}
+
+.skills-box {
+    margin-top: 20px;
+}
+
+.skills-box ul {
+    list-style-type: square;
+    margin-right: 20px;
+    color: #8b949e;
+}
+
+/* قسم المشاريع */
+.project-card {
+    background-color: #161b22;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #30363d;
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 30px;
+    color: #8b949e;
+}
+
+/* شبكة صور التطبيق */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain; /* عشان سكرينات الموبايل تظهر كاملة بدون قص */
+    border-radius: 10px;
+    background-color: #000;
+    border: 1px solid #30363d;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* قسم الشهادات */
+.cert-card {
+    text-align: center;
+    background-color: #161b22;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #30363d;
+}
+
+.cert-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 2px solid #76b900; /* لون إنفيديا الأخضر */
+}
+
+/* الفوتر */
+footer {
+    background-color: #010409;
+    text-align: center;
+    padding: 60px 0;
+    border-top: 1px solid #30363d;
+}
+
+footer h2 {
+    margin-bottom: 30px;
+}
+
+.github-btn {
+    display: inline-block;
+    background-color: #238636;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    transition: background-color 0.3s;
+}
+
+.github-btn:hover {
+    background-color: #2ea043;
+}
+
+/* للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .about-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .skills-box ul {
+        margin-right: 0;
+        list-style-position: inside;
+    }
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+}
